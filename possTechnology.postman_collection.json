@@ -1,0 +1,765 @@
+{
+	"info": {
+		"_postman_id": "0214512b-262e-435c-86b6-069cd437acdb",
+		"name": "possTechnology",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25214975"
+	},
+	"item": [
+		{
+			"name": "fuelFree",
+			"item": [
+				{
+					"name": "reviewController",
+					"item": [
+						{
+							"name": "createReview",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"subject\":\"television\",\r\n    \"review\":\"RAM capacity was very good\",\r\n    \"rating\":4\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/review/create/641179b93b61ebff7e7f0023/64117804f385aa76f6a34e19",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"review",
+										"create",
+										"641179b93b61ebff7e7f0023",
+										"64117804f385aa76f6a34e19"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "editReview",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"subject\" : \"Bluetooth Speaker\",\r\n   \"review\":\"sound volume is good \",\r\n   \"rating\":3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/review/review_edit/6411909821df1acce198a25d",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"review",
+										"review_edit",
+										"6411909821df1acce198a25d"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteReview",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/review/review_delete/6411bcb8cd8d6ac779b6c12a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"review",
+										"review_delete",
+										"6411bcb8cd8d6ac779b6c12a"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "reviewList",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/review/review_list/641179b93b61ebff7e7f0023",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"review",
+										"review_list",
+										"641179b93b61ebff7e7f0023"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "reviewDetails",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/review/review_detail/6411bd3b4e82ed8bd2d29eea",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"review",
+										"review_detail",
+										"6411bd3b4e82ed8bd2d29eea"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "vendorController",
+					"item": [
+						{
+							"name": "vendorRegister",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "vendorName",
+											"value": "Kratagya Agarwal",
+											"type": "text"
+										},
+										{
+											"key": "vendorEmail",
+											"value": "Kratagya@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "vendorPassword",
+											"value": "140620",
+											"type": "text"
+										},
+										{
+											"key": "confirmPassword",
+											"value": "140620",
+											"type": "text"
+										},
+										{
+											"key": "vendorPic",
+											"type": "file",
+											"src": "/C:/Users/HP/Pictures/Saved Pictures/nc.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/vendor/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"vendor",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "vendorLogin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"vendorEmail\":\"Kratagya@gmail.com\",\r\n    \"vendorPassword\":\"140620\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/vendor/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"vendor",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "vendorList",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/vendor/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"vendor",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "productController",
+					"item": [
+						{
+							"name": "productCreate",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "productName",
+											"value": "leptop",
+											"type": "text"
+										},
+										{
+											"key": "productSpecification",
+											"value": "A black colour hp leptop (elitebook)",
+											"type": "text"
+										},
+										{
+											"key": "productImage",
+											"type": "file",
+											"src": [
+												"/C:/Users/HP/Pictures/Saved Pictures/ADS.png",
+												"/C:/Users/HP/Pictures/Saved Pictures/nc.png"
+											]
+										},
+										{
+											"key": "productPrice",
+											"value": "80000",
+											"type": "text"
+										},
+										{
+											"key": "vendorID",
+											"value": "641178c53b61ebff7e7f001d",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/product/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"product",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "productDetails",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/product/details/641179b93b61ebff7e7f0023",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"product",
+										"details",
+										"641179b93b61ebff7e7f0023"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "productList",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/product/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"product",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "productFilterByRange",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"minValue\":10000,\r\n    \"maxValue\" : 90000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/product/filter",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"product",
+										"filter"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "productFilterByVehicle",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productVehicleType\":\"Bike\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/product/filterByVehicle",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"product",
+										"filterByVehicle"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "productFilterByName",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productName\":\"p\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/product/filterByName",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"product",
+										"filterByName"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "productEdit",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productPrice\":120000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/product/edit/641179b93b61ebff7e7f0023",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"product",
+										"edit",
+										"641179b93b61ebff7e7f0023"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "productDelete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/product/delete/640f188eabcedfe026a5eacc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"product",
+										"delete",
+										"640f188eabcedfe026a5eacc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "productCompare",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/product/compare/6412e265d749ef7585c96e3e/641179b93b61ebff7e7f0023",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"product",
+										"compare",
+										"6412e265d749ef7585c96e3e",
+										"641179b93b61ebff7e7f0023"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "productFilterByAll",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "userController",
+					"item": [
+						{
+							"name": "userRegister",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "userName",
+											"value": "Agrima",
+											"type": "text"
+										},
+										{
+											"key": "userEmail",
+											"value": "kratu@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "userPassword",
+											"value": "12345",
+											"type": "text"
+										},
+										{
+											"key": "confirmPassword",
+											"value": "12345",
+											"type": "text"
+										},
+										{
+											"key": "profilePic",
+											"type": "file",
+											"src": "/C:/Users/HP/Pictures/Saved Pictures/nc.png"
+										},
+										{
+											"key": "role",
+											"value": "user",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "userLogin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userEmail\":\"abc@gmail.com\",\r\n    \"userPassword\":\"Abc@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/signin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "userList",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Admin",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "userLogout",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDE5OGFhZWQ1ZWRjZmVlNjZjMmNmYmUiLCJpYXQiOjE2Nzk0NjQzMDQsImV4cCI6MTY4MDMyODMwNH0.F6v_Qbrs2qCySSykl5Bocle_wV2HamcetnivQuhCKsk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/logout",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "enquiryController",
+					"item": [
+						{
+							"name": "enquiryAdd",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Name\":\"Dinni\",\r\n    \"PhoneNo\":9039632460,\r\n    \"Email\":\"Dinni@gmail.com\",\r\n    \"Date\":\"24-09-2000\",\r\n    \"Message\":\"how can i get test drives\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/enquiry/Add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"enquiry",
+										"Add"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
