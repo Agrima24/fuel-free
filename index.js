@@ -14,7 +14,7 @@ app.use(express.static(__dirname));
 app.use(cookieParser());
 
 app.use(router);
-
+app.use(express.static('uploads'))
 const server = app.listen(process.env.PORT, function (req, res) {
   console.log(`server is running on port : ${process.env.port}`);
 });
